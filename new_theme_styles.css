@@ -31,6 +31,7 @@ body {
     padding: 30px;
 }
 
+
 .title {
     font-size: 3rem;
     color: #ffffff; /* White text color */
@@ -52,7 +53,50 @@ body {
 .pumpfun-button:hover .pumpfun-logo {
     transform: scale(1.1); /* Slightly enlarge the logo when hovered */
 }
+/* Container for the logos */
+.logo-wrapper {
+    position: relative;
+    display: inline-block;
+}
 
+/* Main Logo Styles */
+.pumpfun-logo {
+    width: 400px;
+    height: 400px;
+    display: block;
+    animation: rotateLogo 5s infinite linear;
+}
+
+/* Power Number Image Styles */
+.power-number-image {
+    position: absolute;
+    top: -10px;    /* Adjust this to move it higher or lower */
+    right: -10px;  /* Adjust this to move it further right or left */
+    width: 70px;   /* Smaller size like a "power number" */
+    height: 70px;
+    z-index: 10;
+    animation: rotateLogo 5s infinite linear; /* Same rotation as the main logo */
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); /* Optional glow to make it pop */
+}
+
+/* The existing rotation animation */
+@keyframes rotateLogo {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+/* Adjust container height if necessary */
+.about-3d-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Increased slightly to give space for the "power" image */
+    perspective: 1000px;
+}
 /* Navbar */
 .nav-bar {
     display: flex;
